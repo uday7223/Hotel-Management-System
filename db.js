@@ -1,14 +1,18 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
+
 
 //Define teh MongoDB Connection URL
-const mongoURL = 'mongodb://localhost:27017/hotels'
+const mongoURL = process.env.DB_URL_LOCAL;
+// const mongoURL = process.env.DB_URL;
+
 
 //Connect to the MongoDB
 mongoose.connect(mongoURL, {
-    // useNewUrlParser: true,
-    // useUnifiedTopology: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 })
-//Get the default connection
+//Get the default connections
 //Mongoose maintains a default connection object representing the MongoDB connection.
 const db = mongoose.connection;
 
