@@ -2,10 +2,14 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 
+
 //Define teh MongoDB Connection URL
 const mongoURL = process.env.DB_URL_LOCAL;
-// const mongoURL = process.env.DB_URL;
+// const mongoURL = 'mongodb+srv://udaydevnur223:Uday1234@cluster0.qohmwf6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 
+// const mongoURL = process.env.DB_URL_ATLAS || process.env.DB_URL_LOCAL;
+
+// const mongoURL = process.env.DB_URL_ATLAS;
 
 //Connect to the MongoDB
 mongoose.connect(mongoURL, {

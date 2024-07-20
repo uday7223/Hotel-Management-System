@@ -7,17 +7,9 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 const PORT = process.env.PORT || 3000;
 
-
-
 app.get('/', function (req, res) {
   res.send('WELCOME TO OUR HOTELE !')
 })
-
-
-
-
-
-
 
 //Import Person the router files 
 const personRoutes = require('./routes/personRoutes')
